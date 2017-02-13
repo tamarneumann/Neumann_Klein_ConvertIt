@@ -117,3 +117,4 @@ var setValue = function(num)
 {
 	$("converted_value").value = num.toFixed();		
 };
+
