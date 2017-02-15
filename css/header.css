@@ -1,0 +1,20 @@
+.top-space{
+    padding-top: 50px
+} 
+
+.logo-div{
+    padding-top: 10px; 
+    padding-bottom: 10px
+}
+
+.logo-img{
+    position: absolute; 
+    margin-left: 200px; 
+    margin-top:-10px; 
+    display: block; 
+    height: 80px    
+}
+
+.container{
+    padding-right: 150px
+}
