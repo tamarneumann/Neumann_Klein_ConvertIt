@@ -1,20 +1,32 @@
 .top-space{
-    padding-top: 50px
+    padding-top: 50px;
 } 
 
 .logo-div{
     padding-top: 10px; 
-    padding-bottom: 10px
+    padding-bottom: 10px;
+    
 }
 
 .logo-img{
     position: absolute; 
-    margin-left: 200px; 
-    margin-top:-10px; 
+    margin-left: 180px; 
+    margin-top:-15px; 
     display: block; 
-    height: 80px    
+    height: 80px;  
 }
 
 .container{
-    padding-right: 150px
+    padding-right: 130px;
+}
+
+/*vertically center the menu elements*/
+ul li a{
+	margin-top:-10px;
+}
+
+/*horizontal space between menu elements*/
+.navbar-nav > li{
+  padding-left:20px;
+  padding-right:20px;
 }
