@@ -1,3 +1,4 @@
+
 var $ = function (id) 
 {
     return document.getElementById(id);
@@ -5,16 +6,17 @@ var $ = function (id)
 	
 window.onload = function () 
 {
-	$("convert").onclick = convertClick;
+	$("calculate").onclick = convertClick(dropFrom, dropTo);
 	$("from").focus();	//measurment you want to convert from
 };
 
    		
 var convertClick = function () 
 {
-	var from = parseFloat($("from").value);	//measurment you want to convert from
-	var unitFrom = $("unitFrom").value;		//unit to measure you want to convert from
-	var unitTo = $("unitTo").value;			//unit of measure you want to convert to
+	alert("hi");
+	var from = parseFloat($("numFrom").value);	//measurment you want to convert from
+	/*var unitFrom = $("unitFrom").value;		//unit to measure you want to convert from
+	var unitTo = $("unitTo").value;	*/		//unit of measure you want to convert to
 	
 	if(isNaN(from) || from <= 0)
 	{
