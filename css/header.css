@@ -21,7 +21,7 @@
 }
 
 /*vertically center the menu elements*/
-ul li a{
+.menu{
 	margin-top:-10px;
 }
 
