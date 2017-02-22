@@ -62,42 +62,42 @@ var convertClick = function ()
 //convert from farenheit to celcius
 var far2cel = function(from)
 {
-	 var celcius = (from - 32) * (5/9);
+	 var celcius = (parseFloat(from) - 32) * (5/9);
 	 setValue(celcius);
 };
 
 //convert from farenheit to kelvin
 var far2kel = function(from)
 {
-	 var kelvin = (from + 459.67) * (5/9);
+	 var kelvin = (5/9) * (parseFloat(from) - 32) + 273;
 	 setValue(kelvin);
 };
 
 //convert from celcius to kelvin
 var cel2kel = function(from)
 {
-	 var kelvin = from + 273.15;
+	 var kelvin = parseFloat(from) + 273.0;
 	 setValue(kelvin); 
 };
 
 //convert from celcius to farenheit
 var cel2far = function(from)
 {
-	 var farenheit = from * (9/5) + 32;
+	 var farenheit = parseFloat(from) * (9/5) + 32;
 	 setValue(farenheit); 
 };
 
 //convert from kelvin to farenheit
 var kel2far = function(from)
 {
-	 var farenheit = from * (9/5) - 459.67;
+	 var farenheit = parseFloat(from) * (9/5) - 459.67;
 	 setValue(farenheit); 
 };
 
 //convert from kelvin to celcius
 var kel2cel = function(from)
 {
-	 var celcius = from - 273.15;
+	 var celcius = parseFloat(from) - 273.15;
 	 setValue(celcius); 
 };
 
