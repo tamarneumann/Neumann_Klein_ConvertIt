@@ -1,0 +1,14 @@
+#converted_value{
+    background-color: white;
+    text-align: center;
+}
+
+#numFrom{
+    text-align: center;
+}
+
+#numFrom, #converted_value{
+    height: 30px;
+    width: 150px;
+}
+
