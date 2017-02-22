@@ -11,7 +11,6 @@
 		<!--import scripts for javascript and bootstrap-->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
 		<!--include the header in the home page-->
@@ -24,151 +23,42 @@
 		<div id="header"></div>
 
 		<!--import javascript code for conversion-->
-		<script src="/js conversion classes/convertTemp.js" type="text/javascript"></script>
+		<script src="./js/convertTemp.js" type="text/javascript"></script>
 
 		<script>
 			var dropFrom;
 			var dropTo;
-
+			
 			window.onload = function() {
+				$("#calculate").click(convertClick);
+				
 				$("#farenheit, #celcius, #kelvin").draggable();
 				$("#dropTo").droppable({
 					drop : function(event, ui) {
 						$(this).addClass("ui-state-highlight").find("p").html("__________");
 						dropTo = $(ui.draggable).attr("id");
-						alert(dropTo);
 					}
 				});
 				$("#dropFrom").droppable({
 					drop : function(event, ui) {
 						$(this).addClass("ui-state-highlight").find("p").html("__________");
 						dropFrom = $(ui.draggable).attr("id");
-						alert(dropFrom);
 					}
 				});
-				$("calculate").onclick = alert;
-				$("calculate").onclick = convertClick;
 			};
+
+			/*var convertClick = function()
+			{
+				alert("testing");
+				var from = document.getElementById("numFrom");
+				alert(from);
+			};*/
 			
-			var alert = function()
-			{
-				alert("tesing button click");
-			}
-			
-			var convertClick = function () 
-{
-	alert("hi");
-	var from = parseFloat($("numFrom").value);	//measurment you want to convert from
-	/*var unitFrom = $("unitFrom").value;		//unit to measure you want to convert from
-	var unitTo = $("unitTo").value;	*/		//unit of measure you want to convert to
-	
-	if(isNaN(from) || from <= 0)
-	{
-		alert("Amount must be a valid number greater than zero.");
-	}
-	else if(unitFrom == null)
-	{
-		alert("You must select a unit of measure to convert from.");
-	}
-	else if(unitTo == null)
-	{
-		alert("You must select a unit of measure to convert to.");
-	}
-	else 
-	{
-		//search for the appropirate function to call based on the unit of measure
-		//that the user wants to convert to and from
-		//really if last else if should just be else...but keep for testing and then take out
-		if(unitFrom.localeCompare("farenheit"))
-		{
-			if(unitTo.localeCompare("celcius"))
-			{
-				far2cel(from);
-			}
-			else if(unitTo.localeCompare("kelvin"))
-			{
-				far2kel(from);
-			}
-		}
-		else if(unitFrom.localeCompare("celcius"))
-		{
-			if(unitTo.localeCompare("kelvin"))
-			{
-				cel2kel(from);
-			}
-			else if(unitTo.localeCompare("farenheit"))
-			{
-				cel2far(from);
-			}
-		}
-		else if(unitFrom.localeCompare("kelvin"))
-		{
-			if(unitTo.localeCompare("farenheit"))
-			{
-				kel2far(from);
-			}
-			else if(unitTo.localeCompare("celcius"))
-			{
-				kel2cel(from);
-			}
-		}
-	} 
-};
-
-//convert from farenheit to celcius
-var far2cel = function(from)
-{
-	 var celcius = (from - 32) * (5/9);
-	 setValue(celcius);
-};
-
-//convert from farenheit to kelvin
-var far2kel = function(from)
-{
-	 var kelvin = (from + 459.67) * (5/9);
-	 setValue(kelvin);
-};
-
-//convert from celcius to kelvin
-var cel2kel = function(from)
-{
-	 var kelvin = from + 273.15;
-	 setValue(kelvin); 
-};
-
-//convert from celcius to farenheit
-var cel2far = function(from)
-{
-	 var farenheit = from * (9/5) + 32;
-	 setValue(farenheit); 
-};
-
-//convert from kelvin to farenheit
-var kel2far = function(from)
-{
-	 var farenheit = from * (9/5) - 459.67;
-	 setValue(farenheit); 
-};
-
-//convert from kelvin to celcius
-var kel2cel = function(from)
-{
-	 var celcius = from - 273.15;
-	 setValue(celcius); 
-};
-
-//set the value that is passed in to be the converted value
-//the value passed in is based on the calculation
-var setValue = function(num)
-{
-	$("converted_value").value = num.toFixed();		
-};
-
-
 		</script>
 	</head>
-
 	<body>
+		<!--<button id="calculate">calculate</button>-->
+
 		<input id="numFrom" type="text">
 		</input>
 		<div id="dropFrom">
@@ -182,7 +72,7 @@ var setValue = function(num)
 				Drag measurement here
 			</p>
 		</div>
-		<button id="calculate" type="button" onclick="alert('testing button')">
+		<button id="calculate" type="button">
 			Calculate
 		</button>
 		<div id="converted_value">

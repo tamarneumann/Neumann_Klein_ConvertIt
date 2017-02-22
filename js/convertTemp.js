@@ -1,23 +1,11 @@
 
-var $ = function (id) 
-{
-    return document.getElementById(id);
-};
-	
-window.onload = function () 
-{
-	$("calculate").onclick = convertClick(dropFrom, dropTo);
-	$("from").focus();	//measurment you want to convert from
-};
 
-   		
 var convertClick = function () 
 {
-	alert("hi");
-	var from = parseFloat($("numFrom").value);	//measurment you want to convert from
-	/*var unitFrom = $("unitFrom").value;		//unit to measure you want to convert from
-	var unitTo = $("unitTo").value;	*/		//unit of measure you want to convert to
-	
+	var from = document.getElementById("numFrom").value;		//measurment you want to convert from
+	var unitFrom = dropFrom;
+	var unitTo = dropTo;
+
 	if(isNaN(from) || from <= 0)
 	{
 		alert("Amount must be a valid number greater than zero.");
@@ -35,35 +23,35 @@ var convertClick = function ()
 		//search for the appropirate function to call based on the unit of measure
 		//that the user wants to convert to and from
 		//really if last else if should just be else...but keep for testing and then take out
-		if(unitFrom.localeCompare("farenheit"))
+		if(unitFrom == "farenheit")
 		{
-			if(unitTo.localeCompare("celcius"))
+			if(unitTo == "celcius")
 			{
 				far2cel(from);
 			}
-			else if(unitTo.localeCompare("kelvin"))
+			else if(unitTo == "kelvin")
 			{
 				far2kel(from);
 			}
 		}
-		else if(unitFrom.localeCompare("celcius"))
+		else if(unitFrom == "celcius")
 		{
-			if(unitTo.localeCompare("kelvin"))
+			if(unitTo == "kelvin")
 			{
 				cel2kel(from);
 			}
-			else if(unitTo.localeCompare("farenheit"))
+			else if(unitTo == "farenheit")
 			{
 				cel2far(from);
 			}
 		}
-		else if(unitFrom.localeCompare("kelvin"))
+		else if(unitFrom == "kelvin")
 		{
-			if(unitTo.localeCompare("farenheit"))
+			if(unitTo == "farenheit")
 			{
 				kel2far(from);
 			}
-			else if(unitTo.localeCompare("celcius"))
+			else if(unitTo == "celcius")
 			{
 				kel2cel(from);
 			}
@@ -117,6 +105,6 @@ var kel2cel = function(from)
 //the value passed in is based on the calculation
 var setValue = function(num)
 {
-	$("converted_value").value = num.toFixed();		
+	document.getElementById("converted_value").innerHTML = num;
 };
 
