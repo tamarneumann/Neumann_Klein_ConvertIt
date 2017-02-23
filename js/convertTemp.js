@@ -3,18 +3,16 @@
 var convertClick = function () 
 {
 	var from = document.getElementById("numFrom").value;		//measurment you want to convert from
-	var unitFrom = dropFrom;
-	var unitTo = dropTo;
-
+	
 	if(isNaN(from) || from <= 0)
 	{
 		alert("Amount must be a valid number greater than zero.");
 	}
-	else if(unitFrom == null)
+	else if(dropFrom == null)
 	{
 		alert("You must select a unit of measure to convert from.");
 	}
-	else if(unitTo == null)
+	else if(dropTo == null)
 	{
 		alert("You must select a unit of measure to convert to.");
 	}
@@ -23,35 +21,35 @@ var convertClick = function ()
 		//search for the appropirate function to call based on the unit of measure
 		//that the user wants to convert to and from
 		//really if last else if should just be else...but keep for testing and then take out
-		if(unitFrom == "farenheit")
+		if(dropFrom == "farenheit")
 		{
-			if(unitTo == "celcius")
+			if(dropTo == "celcius")
 			{
 				far2cel(from);
 			}
-			else if(unitTo == "kelvin")
+			else if(dropTo == "kelvin")
 			{
 				far2kel(from);
 			}
 		}
-		else if(unitFrom == "celcius")
+		else if(dropFrom == "celcius")
 		{
-			if(unitTo == "kelvin")
+			if(dropTo == "kelvin")
 			{
 				cel2kel(from);
 			}
-			else if(unitTo == "farenheit")
+			else if(dropTo == "farenheit")
 			{
 				cel2far(from);
 			}
 		}
-		else if(unitFrom == "kelvin")
+		else if(dropFrom == "kelvin")
 		{
-			if(unitTo == "farenheit")
+			if(dropTo == "farenheit")
 			{
 				kel2far(from);
 			}
-			else if(unitTo == "celcius")
+			else if(dropTo == "celcius")
 			{
 				kel2cel(from);
 			}
