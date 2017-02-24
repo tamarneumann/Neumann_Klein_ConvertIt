@@ -42,10 +42,11 @@
 	padding-top: .2cm;
 	
 }
-#converted_value{
-	color: white;
+
+#converted_value{;
 	padding-top: .2cm;
 }
+
 #calculate {
 	height: 30px;
 	width: 150px;
