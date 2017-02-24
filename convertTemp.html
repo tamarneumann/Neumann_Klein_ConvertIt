@@ -38,13 +38,13 @@
 				$("#farenheit, #celcius, #kelvin").draggable();
 				$("#dropTo").droppable({
 					drop : function(event, ui) {
-						$(this).addClass("ui-state-highlight").find("p").html("__________");
+						$(this).addClass("ui-state-highlight").find("p").html($(ui.draggable).attr("id").toUpperCase());
 						dropTo = $(ui.draggable).attr("id");
 					}
 				});
 				$("#dropFrom").droppable({
 					drop : function(event, ui) {
-						$(this).addClass("ui-state-highlight").find("p").html("__________");
+						$(this).addClass("ui-state-highlight").find("p").html($(ui.draggable).attr("id").toUpperCase());
 						dropFrom = $(ui.draggable).attr("id");
 					}
 				});
