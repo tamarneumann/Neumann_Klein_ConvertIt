@@ -1,14 +1,64 @@
-#converted_value{
-    background-color: white;
-    text-align: center;
-}
 
-#numFrom{
-    text-align: center;
-}
 
 #numFrom, #converted_value{
     height: 30px;
     width: 150px;
+    display: inline-block;
+    border: 3px solid black;
+    background-color: white;
+    text-align: center;
 }
+
+#dropFrom{
+    display: inline-block;
+    border: 3px solid black;
+    background-color: white;
+    font-family: "Comic Sans MS";
+}
+
+#dropTo{
+    display: inline-block;
+    border: 3px solid black;
+    background-color: white;
+    font-family: "Comic Sans MS";
+}
+
+#calculate{
+    height: 30px;
+    width: 150px;
+    font-family: "Comic Sans MS";
+}
+
+#word_bank{
+    margin: auto;
+    width: 40%;
+    border: 3px solid black;
+    padding: 10px;
+}
+
+#farenheit{
+    float: left; 
+    background-color: white;
+    display: inline-block;
+    font-family: "Comic Sans MS";
+    padding: 0 .2cm 0 .2cm;
+}
+
+#celcius{
+    /*float: right;*/
+    background-color: white;
+    display: inline-block;
+    font-family: "Comic Sans MS";
+    padding: 0 .2cm 0 .2cm;
+}
+
+#kelvin{
+    float: right; 
+    background-color: white;
+    display: inline-block; 
+    font-family: "Comic Sans MS";
+    padding: 0 .2cm 0 .2cm;
+}
+
+
 
