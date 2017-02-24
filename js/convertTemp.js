@@ -103,6 +103,6 @@ var kel2cel = function(from)
 //the value passed in is based on the calculation
 var setValue = function(num)
 {
-	document.getElementById("converted_value").innerHTML = num;
+	document.getElementById("converted_value").innerHTML = num.toFixed(2);
 };
 

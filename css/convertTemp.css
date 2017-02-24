@@ -9,12 +9,16 @@
 }
 
 #numFrom, #converted_value {
-	height: 30px;
+	height: 38px;
 	width: 150px;
 	display: inline-block;
 	background-color: white;
+	border: none;
 	text-align: center;
 	border-radius: 5px;
+	margin-right: 10px;
+	padding-top: .2cm;
+	
 }
 
 #dropFrom {
@@ -24,6 +28,8 @@
 	width: 170px;
 	font-family: "Arial";
 	border-radius: 5px;
+	margin-right: 10px;
+	padding-top: .2cm;
 }
 
 #dropTo {
@@ -33,13 +39,18 @@
 	font-family: "Arial";
 	border-radius: 5px;
 	width: 170px;
+	padding-top: .2cm;
+	
 }
-
+#converted_value{
+	color: white;
+	padding-top: .2cm;
+}
 #calculate {
 	height: 30px;
 	width: 150px;
 	font-family: "Arial";
-	margin-top: 40px;
+	margin-top: 20px;
 	margin-bottom: 50px;
 	background-color: #black;
 	border-radius: 5px;
@@ -49,6 +60,7 @@
 #word_bank {
 
 	margin: auto; /*center horizontally*/
+	margin-bottom: 20px;
 	width: 30%;
 	padding: 10px;
 }
@@ -56,7 +68,8 @@
 #conversion-row {
 	margin-top: 50px;
 	margin-bottom: 50px;
-}
+	
+	}
 
 #farenheit {
 	float: left;
