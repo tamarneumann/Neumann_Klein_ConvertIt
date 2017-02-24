@@ -15,7 +15,7 @@
 
 		<!--incluce stylesheet-->
 		<link rel="stylesheet" href="css/convertTemp.css">
-		
+
 		<!--include the header in the home page-->
 		<!--the javascript will load the header.html and assign it to the header div-->
 		<script>
@@ -31,10 +31,10 @@
 		<script>
 			var dropFrom;
 			var dropTo;
-			
+
 			window.onload = function() {
 				$("#calculate").click(convertClick);
-				
+
 				$("#farenheit, #celcius, #kelvin").draggable();
 				$("#dropTo").droppable({
 					drop : function(event, ui) {
@@ -49,25 +49,56 @@
 					}
 				});
 			};
-			
+
 		</script>
 	</head>
-	
+
 	<body>
-		<input id="numFrom" type="text"></input>
-		<div id="dropFrom" class="droppable, ui-widget-header"><p>Drag measurement here</p></div>
-		<div id="converted_value">value</div>
-		<div id="dropTo" class="ui-widget-header"><p>Drag measurement here</p></div>
-		
-		<button id="calculate" type="button">Calculate</button>
-		
-		<!--have a separate dive to hold all choices-->
-		<div id="word_bank">
-			<div id="farenheit"><p> FARENHEIT </p></div>
-			<div id="celcius"><p> CELCIUS </p></div>
-			<div id="kelvin"><p> KELVIN </p></div>
+		<div id="form-style">
+			<div  class="center" id= "conversion-row">
+				<input id="numFrom" type="text"  >
+				</input>
+				<div id="dropFrom" class="droppable, ui-widget-header">
+					<p>
+						Drag measurement here
+					</p>
+				</div>
+				<div id="converted_value">
+					value
+				</div>
+				<div id="dropTo" class="ui-widget-header">
+					<p>
+						Drag measurement here
+					</p>
+				</div>
+			</div>
+
+			<!--have a separate dive to hold all choices-->
+
+			<div id="word_bank" class="center">
+				
+				<div id="celcius">
+					<p>
+						CELCIUS
+					</p>
+				</div>
+				<div id="farenheit">
+					<p>
+						FARENHEIT
+					</p>
+				</div>
+				<div id="kelvin">
+					<p>
+						KELVIN
+					</p>
+				</div>
+			</div>
+			<div class= "center">
+				<button id="calculate" type="button">
+					Calculate
+				</button>
+			</div>
 		</div>
-		
 	</body>
 
 </html>
