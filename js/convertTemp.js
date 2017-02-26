@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-
 var convertClick = function () 
 {
 	var from = document.getElementById("numFrom").value;		//measurment you want to convert from
@@ -106,9 +103,6 @@ var setValue = function(num)
 	document.getElementById("converted_value").innerHTML = num.toFixed(4);
 };
 
-=======
-
-
 var convertClick = function () 
 {
 	var from = document.getElementById("numFrom").value;		//measurment you want to convert from
@@ -213,5 +207,3 @@ var setValue = function(num)
 {
 	document.getElementById("converted_value").innerHTML = num.toFixed(4);
 };
-
->>>>>>> 87b8d4befce2ca51434b967366829165678b3d7c

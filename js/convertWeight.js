@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 var convertClick = function () 
 {
 	var from = document.getElementById("numFrom").value;		//measurment you want to convert from
@@ -19,53 +18,53 @@ var convertClick = function ()
 	{
 		//search for the appropirate function to call based on the unit of measure
 		//that the user wants to convert to and from
-		if(dropFrom == "lb")
+		if(dropFrom == "pound")
 		{
-			if(dropTo == "kg")
+			if(dropTo == "kilogram")
 			{
-				lb2kg(from);
+				pound2kilogram(from);
 			}
 			else if(dropTo == "ton")
 			{
-				lb2ton(from);
+				pound2ton(from);
 			}
 			else if(dropTo == "gram")
 			{
-				lb2gram(from);
+				pound2gram(from);
 			}
 			else if(dropTo == "ounce")
 			{
-				lb2ounce(from);
+				pound2ounce(from);
 			}
 		}
-		else if(dropFrom == "kg")
+		else if(dropFrom == "kilogram")
 		{
-			if(dropTo == "lb")
+			if(dropTo == "pound")
 			{
-				kg2lb(from);
+				kilogram2pound(from);
 			}
 			else if(dropTo == "ton")
 			{
-				kg2ton(from);
+				kilogram2ton(from);
 			}
 			else if(dropTo == "gram")
 			{
-				kg2gram(from);
+				kilogram2gram(from);
 			}
 			else if(dropTo == "ounce")
 			{
-				kg2ounce(from);
+				kilogram2ounce(from);
 			}
 		}
 		else if(dropFrom == "ton")
 		{
-			if(dropTo == "lb")
+			if(dropTo == "pound")
 			{
-				ton2lb(from);
+				ton2pound(from);
 			}
-			else if(dropTo == "kg")
+			else if(dropTo == "kilogram")
 			{
-				ton2kg(from);
+				ton2kilogram(from);
 			}
 			else if(dropTo == "gram")
 			{
@@ -78,13 +77,13 @@ var convertClick = function ()
 		}
 		else if(dropFrom == "gram")
 		{
-			if(dropTo == "lb")
+			if(dropTo == "pound")
 			{
-				gram2lb(from);
+				gram2pound(from);
 			}
-			else if(dropTo == "kg")
+			else if(dropTo == "kilogram")
 			{
-				gram2kg(from);
+				gram2kilogram(from);
 			}
 			else if(dropTo == "ton")
 			{
@@ -97,13 +96,13 @@ var convertClick = function ()
 		}
 		else if(dropFrom == "ounce")
 		{
-			if(dropTo == "lb")
+			if(dropTo == "pound")
 			{
-				ounce2lb(from);
+				ounce2pound(from);
 			}
-			else if(dropTo == "kg")
+			else if(dropTo == "kilogram")
 			{
-				ounce2kg(from);
+				ounce2kilogram(from);
 			}
 			else if(dropTo == "ton")
 			{
@@ -117,74 +116,74 @@ var convertClick = function ()
 	} 
 };
 
-//convert from pounds to kg
-var lb2kg = function(from)
+//convert from pounds to kilogram
+var pound2kilogram = function(from)
 {
-	 var kg = parseFloat(from) * 0.45359237;
-	 setValue(kg);
+	 var kilogram = parseFloat(from) * 0.45359237;
+	 setValue(kilogram);
 };
 
 //convert from pounds to ton
-var lb2ton = function(from)
+var pound2ton = function(from)
 {
 	 var ton = parseFloat(from) / 2204.6226199999;
 	 setValue(ton);
 };
 
 //convert from pounds to gram
-var lb2gram = function(from)
+var pound2gram = function(from)
 {
 	 var gram = parseFloat(from) / 0.0022046;
 	 setValue(gram);
 };
 
 //convert from pounds to ounce
-var lb2ounce = function(from)
+var pound2ounce = function(from)
 {
 	 var oz = parseFloat(from) * 16;
 	 setValue(oz);
 };
 
-//convert from kg to pounds
-var kg2lb = function(from)
+//convert from kilogram to pounds
+var kilogram2pound = function(from)
 {
-	 var lb = parseFloat(from) / 0.45359237;
-	 setValue(lb);
+	 var pound = parseFloat(from) / 0.45359237;
+	 setValue(pound);
 };
 
-//convert from kg to ton (metric)
-var kg2ton = function(from)
+//convert from kilogram to ton (metric)
+var kilogram2ton = function(from)
 {
 	 var ton = parseFloat(from) / 1000;
 	 setValue(ton);
 };
 
-//convert from kg to gram
-var kg2gram = function(from)
+//convert from kilogram to gram
+var kilogram2gram = function(from)
 {
 	 var gram = parseFloat(from) * 1000;
 	 setValue(gram);
 };
 
-//convert from kg to oz
-var kg2ounce = function(from)
+//convert from kilogram to oz
+var kilogram2ounce = function(from)
 {
 	 var oz = parseFloat(from) / 0.02834952;
 	 setValue(oz);
 };
 
-//convert from (metric) ton to lb
-var ton2lb = function(from)
+//convert from (metric) ton to pound
+var ton2pound = function(from)
 {
-	 var lb = parseFloat(from) * 2204.6226199999;
-	 setValue(lb);
+	 var pound = parseFloat(from) * 2204.6226199999;
+	 setValue(pound);
 };
 
-//convert from (metric) ton to kg
-var ton2kg = function(from)
+//convert from (metric) ton to kilogram
+var ton2kilogram = function(from)
 {
-	 var kg = parseFloat(from) * 1000;
-	 setValue(kg);
+	 var kilogram = parseFloat(from) * 1000;
+	 setValue(kilogram);
 };
 
 //convert from (metric) ton to gram
@@ -201,18 +200,18 @@ var ton2ounce = function(from)
 	 setValue(oz);
 };
 
-//convert from gram to lb
-var gram2lb = function(from)
+//convert from gram to pound
+var gram2pound = function(from)
 {
-	 var lb = parseFloat(from) * 0.0022046;
-	 setValue(lb);
+	 var pound = parseFloat(from) * 0.0022046;
+	 setValue(pound);
 };
 
-//convert from gram to kg
-var gram2kg = function(from)
+//convert from gram to kilogram
+var gram2kilogram = function(from)
 {
-	 var kg = parseFloat(from) / 1000;
-	 setValue(kg);
+	 var kilogram = parseFloat(from) / 1000;
+	 setValue(kilogram);
 };
 
 //convert from gram to (metric) ton 
@@ -230,17 +229,17 @@ var gram2ounce = function(from)
 };
 
 //convert from ounces to pounds
-var ounce2lb = function(from)
+var ounce2pound = function(from)
 {
-	 var lb = parseFloat(from) / 16;
-	 setValue(lb);
+	 var pound = parseFloat(from) / 16;
+	 setValue(pound);
 };
 
-//convert from oz to kg
-var ounce2kg = function(from)
+//convert from oz to kilogram
+var ounce2kilogram = function(from)
 {
-	 var kg = parseFloat(from) * 0.02834952;
-	 setValue(kg);
+	 var kilogram = parseFloat(from) * 0.02834952;
+	 setValue(kilogram);
 };
 
 //convert from oz to (metric) ton
@@ -264,7 +263,6 @@ var setValue = function(num)
 	document.getElementById("converted_value").innerHTML = num.toFixed(4);
 };
 
-=======
 var convertClick = function () 
 {
 	var from = document.getElementById("numFrom").value;		//measurment you want to convert from
@@ -285,53 +283,53 @@ var convertClick = function ()
 	{
 		//search for the appropirate function to call based on the unit of measure
 		//that the user wants to convert to and from
-		if(dropFrom == "lb")
+		if(dropFrom == "pound")
 		{
-			if(dropTo == "kg")
+			if(dropTo == "kilogram")
 			{
-				lb2kg(from);
+				pound2kilogram(from);
 			}
 			else if(dropTo == "ton")
 			{
-				lb2ton(from);
+				pound2ton(from);
 			}
 			else if(dropTo == "gram")
 			{
-				lb2gram(from);
+				pound2gram(from);
 			}
 			else if(dropTo == "ounce")
 			{
-				lb2ounce(from);
+				pound2ounce(from);
 			}
 		}
-		else if(dropFrom == "kg")
+		else if(dropFrom == "kilogram")
 		{
-			if(dropTo == "lb")
+			if(dropTo == "pound")
 			{
-				kg2lb(from);
+				kilogram2pound(from);
 			}
 			else if(dropTo == "ton")
 			{
-				kg2ton(from);
+				kilogram2ton(from);
 			}
 			else if(dropTo == "gram")
 			{
-				kg2gram(from);
+				kilogram2gram(from);
 			}
 			else if(dropTo == "ounce")
 			{
-				kg2ounce(from);
+				kilogram2ounce(from);
 			}
 		}
 		else if(dropFrom == "ton")
 		{
-			if(dropTo == "lb")
+			if(dropTo == "pound")
 			{
-				ton2lb(from);
+				ton2pound(from);
 			}
-			else if(dropTo == "kg")
+			else if(dropTo == "kilogram")
 			{
-				ton2kg(from);
+				ton2kilogram(from);
 			}
 			else if(dropTo == "gram")
 			{
@@ -344,13 +342,13 @@ var convertClick = function ()
 		}
 		else if(dropFrom == "gram")
 		{
-			if(dropTo == "lb")
+			if(dropTo == "pound")
 			{
-				gram2lb(from);
+				gram2pound(from);
 			}
-			else if(dropTo == "kg")
+			else if(dropTo == "kilogram")
 			{
-				gram2kg(from);
+				gram2kilogram(from);
 			}
 			else if(dropTo == "ton")
 			{
@@ -363,13 +361,13 @@ var convertClick = function ()
 		}
 		else if(dropFrom == "ounce")
 		{
-			if(dropTo == "lb")
+			if(dropTo == "pound")
 			{
-				ounce2lb(from);
+				ounce2pound(from);
 			}
-			else if(dropTo == "kg")
+			else if(dropTo == "kilogram")
 			{
-				ounce2kg(from);
+				ounce2kilogram(from);
 			}
 			else if(dropTo == "ton")
 			{
@@ -383,74 +381,74 @@ var convertClick = function ()
 	} 
 };
 
-//convert from pounds to kg
-var lb2kg = function(from)
+//convert from pounds to kilogram
+var pound2kilogram = function(from)
 {
-	 var kg = parseFloat(from) * 0.45359237;
-	 setValue(kg);
+	 var kilogram = parseFloat(from) * 0.45359237;
+	 setValue(kilogram);
 };
 
 //convert from pounds to ton
-var lb2ton = function(from)
+var pound2ton = function(from)
 {
 	 var ton = parseFloat(from) / 2204.6226199999;
 	 setValue(ton);
 };
 
 //convert from pounds to gram
-var lb2gram = function(from)
+var pound2gram = function(from)
 {
 	 var gram = parseFloat(from) / 0.0022046;
 	 setValue(gram);
 };
 
 //convert from pounds to ounce
-var lb2ounce = function(from)
+var pound2ounce = function(from)
 {
 	 var oz = parseFloat(from) * 16;
 	 setValue(oz);
 };
 
-//convert from kg to pounds
-var kg2lb = function(from)
+//convert from kilogram to pounds
+var kilogram2pound = function(from)
 {
-	 var lb = parseFloat(from) / 0.45359237;
-	 setValue(lb);
+	 var pound = parseFloat(from) / 0.45359237;
+	 setValue(pound);
 };
 
-//convert from kg to ton (metric)
-var kg2ton = function(from)
+//convert from kilogram to ton (metric)
+var kilogram2ton = function(from)
 {
 	 var ton = parseFloat(from) / 1000;
 	 setValue(ton);
 };
 
-//convert from kg to gram
-var kg2gram = function(from)
+//convert from kilogram to gram
+var kilogram2gram = function(from)
 {
 	 var gram = parseFloat(from) * 1000;
 	 setValue(gram);
 };
 
-//convert from kg to oz
-var kg2ounce = function(from)
+//convert from kilogram to oz
+var kilogram2ounce = function(from)
 {
 	 var oz = parseFloat(from) / 0.02834952;
 	 setValue(oz);
 };
 
-//convert from (metric) ton to lb
-var ton2lb = function(from)
+//convert from (metric) ton to pound
+var ton2pound = function(from)
 {
-	 var lb = parseFloat(from) * 2204.6226199999;
-	 setValue(lb);
+	 var pound = parseFloat(from) * 2204.6226199999;
+	 setValue(pound);
 };
 
-//convert from (metric) ton to kg
-var ton2kg = function(from)
+//convert from (metric) ton to kilogram
+var ton2kilogram = function(from)
 {
-	 var kg = parseFloat(from) * 1000;
-	 setValue(kg);
+	 var kilogram = parseFloat(from) * 1000;
+	 setValue(kilogram);
 };
 
 //convert from (metric) ton to gram
@@ -467,18 +465,18 @@ var ton2ounce = function(from)
 	 setValue(oz);
 };
 
-//convert from gram to lb
-var gram2lb = function(from)
+//convert from gram to pound
+var gram2pound = function(from)
 {
-	 var lb = parseFloat(from) * 0.0022046;
-	 setValue(lb);
+	 var pound = parseFloat(from) * 0.0022046;
+	 setValue(pound);
 };
 
-//convert from gram to kg
-var gram2kg = function(from)
+//convert from gram to kilogram
+var gram2kilogram = function(from)
 {
-	 var kg = parseFloat(from) / 1000;
-	 setValue(kg);
+	 var kilogram = parseFloat(from) / 1000;
+	 setValue(kilogram);
 };
 
 //convert from gram to (metric) ton 
@@ -496,17 +494,17 @@ var gram2ounce = function(from)
 };
 
 //convert from ounces to pounds
-var ounce2lb = function(from)
+var ounce2pound = function(from)
 {
-	 var lb = parseFloat(from) / 16;
-	 setValue(lb);
+	 var pound = parseFloat(from) / 16;
+	 setValue(pound);
 };
 
-//convert from oz to kg
-var ounce2kg = function(from)
+//convert from oz to kilogram
+var ounce2kilogram = function(from)
 {
-	 var kg = parseFloat(from) * 0.02834952;
-	 setValue(kg);
+	 var kilogram = parseFloat(from) * 0.02834952;
+	 setValue(kilogram);
 };
 
 //convert from oz to (metric) ton
@@ -529,5 +527,3 @@ var setValue = function(num)
 {
 	document.getElementById("converted_value").innerHTML = num.toFixed(4);
 };
-
->>>>>>> 87b8d4befce2ca51434b967366829165678b3d7c
