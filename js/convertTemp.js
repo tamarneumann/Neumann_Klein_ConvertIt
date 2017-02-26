@@ -20,7 +20,6 @@ var convertClick = function ()
 	{
 		//search for the appropirate function to call based on the unit of measure
 		//that the user wants to convert to and from
-		//really if last else if should just be else...but keep for testing and then take out
 		if(dropFrom == "farenheit")
 		{
 			if(dropTo == "celcius")
@@ -103,6 +102,6 @@ var kel2cel = function(from)
 //the value passed in is based on the calculation
 var setValue = function(num)
 {
-	document.getElementById("converted_value").innerHTML = num.toFixed(2);
+	document.getElementById("converted_value").innerHTML = num.toFixed(4);
 };
 
