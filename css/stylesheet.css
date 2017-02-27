@@ -1,3 +1,13 @@
 body{
 	background-color:#D3D3D3;
 }
+.carousel slide{
+	width:50%;
+}
+.carousel-inner{
+	height: 30%;
+	width: 30%;
+	margin: auto;
+}
+
+
