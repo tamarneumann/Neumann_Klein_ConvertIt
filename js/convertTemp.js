@@ -28,6 +28,10 @@ var convertClick = function ()
 			{
 				far2kel(from);
 			}
+			else
+			{
+				alert("Convert to and from have to be different measurement types");
+			}
 		}
 		else if(dropFrom == "celcius")
 		{

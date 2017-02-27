@@ -36,6 +36,10 @@ var convertClick = function ()
 			{
 				pound2ounce(from);
 			}
+			else
+			{
+				alert("Convert to and from have to be different units of measure");
+			}
 		}
 		else if(dropFrom == "kilogram")
 		{
@@ -54,6 +58,10 @@ var convertClick = function ()
 			else if(dropTo == "ounce")
 			{
 				kilogram2ounce(from);
+			}
+			else
+			{
+				alert("Convert to and from have to be different units of measure");
 			}
 		}
 		else if(dropFrom == "ton")
@@ -74,6 +82,10 @@ var convertClick = function ()
 			{
 				ton2ounce(from);
 			}
+			else
+			{
+				alert("Convert to and from have to be different units of measure");
+			}
 		}
 		else if(dropFrom == "gram")
 		{
@@ -93,6 +105,10 @@ var convertClick = function ()
 			{
 				gram2ounce(from);
 			}
+			else
+			{
+				alert("Convert to and from have to be different units of measure");
+			}
 		}
 		else if(dropFrom == "ounce")
 		{
@@ -111,6 +127,10 @@ var convertClick = function ()
 			else if(dropTo == "gram")
 			{
 				ounce2gram(from);
+			}
+			else
+			{
+				alert("Convert to and from have to be different units of measure");
 			}
 		}
 	} 
