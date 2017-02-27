@@ -30,7 +30,7 @@ var convertClick = function ()
 			}
 			else
 			{
-				alert("Convert to and from have to be different measurement types");
+				alert("Convert to and from have to be different units of measure");
 			}
 		}
 		else if(dropFrom == "celcius")
@@ -43,6 +43,10 @@ var convertClick = function ()
 			{
 				cel2far(from);
 			}
+			else
+			{
+				alert("Convert to and from have to be different units of measure");
+			}
 		}
 		else if(dropFrom == "kelvin")
 		{
@@ -53,6 +57,10 @@ var convertClick = function ()
 			else if(dropTo == "celcius")
 			{
 				kel2cel(from);
+			}
+			else
+			{
+				alert("Convert to and from have to be different units of measure");
 			}
 		}
 	} 
