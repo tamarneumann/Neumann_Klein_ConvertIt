@@ -61,7 +61,40 @@
 			});
 		</script>
 
-		
+		<style type="text/css">
+			#carousel {
+				width: 960px;
+				border: 1px solid #222;
+				height: 300px;
+				margin: 50px 50px 50px 100px;
+				position: relative;
+				clear: both;
+				overflow: hidden;
+				background: #FFF;
+			}
+			#carousel img {
+				visibility: hidden; /* hide images until carousel can handle them */
+				cursor: pointer; /* otherwise it's not as obvious items can be clicked */
+			}
+
+			.split-left {
+				width: 450px;
+				float: left;
+			}
+			.split-right {
+				width: 400px;
+				float: left;
+				margin-left: 10px;
+			}
+			#callback-output {
+				height: 250px;
+				overflow: scroll;
+			}
+			textarea#newoptions {
+				width: 430px;
+			}
+		</style>
+
 		<div id="header"></div>
 
 	</head>
@@ -74,12 +107,12 @@
 				<img src="images/colorScale.png" height="150px" id="item-1" />
 				<img src="images/colorClock.png" height="150px" id="item-2" />
 				<img src="images/colorRuler.png" height="150px" id="item-3" />
-				<img src="images/colorThermometer.png" height="250px" id="item-4" />
+				<img src="images/colorThermometer.png" height="150px" id="item-4" />
 				<img src="images/colorSpedometer.png" height="150px" id="item-5" />
 				<img src="images/colorCup.png" height="150px" id="item-6" />
 
 			</div>
-
+		</div>
 	</body>
 
 </html>
