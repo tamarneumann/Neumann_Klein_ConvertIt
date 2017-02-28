@@ -4,14 +4,14 @@
 
 		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame-->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		
+
 		<!--page title-->
 		<title>ConvertIt | Home</title>
-		
+
 		<!--import scripts for javascript and bootstrap-->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		
+
 		<!--include the header in the home page-->
 		<!--the javascript will load the header.html and assign it to the header div-->
 		<script>
@@ -19,68 +19,67 @@
 				$("#header").load("header.html");
 			});
 		</script>
+
+		<script type="text/javascript" src="js/jquery.waterwheelCarousel.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				var carousel = $("#carousel").waterwheelCarousel({
+					flankingItems : 3,
+					movingToCenter : function($item) {
+						$('#callback-output').prepend('movingToCenter: ' + $item.attr('id') + '<br/>');
+					},
+					movedToCenter : function($item) {
+						$('#callback-output').prepend('movedToCenter: ' + $item.attr('id') + '<br/>');
+					},
+					movingFromCenter : function($item) {
+						$('#callback-output').prepend('movingFromCenter: ' + $item.attr('id') + '<br/>');
+					},
+					movedFromCenter : function($item) {
+						$('#callback-output').prepend('movedFromCenter: ' + $item.attr('id') + '<br/>');
+					},
+					clickedCenter : function($item) {
+						$('#callback-output').prepend('clickedCenter: ' + $item.attr('id') + '<br/>');
+					}
+				});
+
+				$('#prev').bind('click', function() {
+					carousel.prev();
+					return false
+				});
+
+				$('#next').bind('click', function() {
+					carousel.next();
+					return false;
+				});
+
+				$('#reload').bind('click', function() {
+					newOptions = eval("(" + $('#newoptions').val() + ")");
+					carousel.reload(newOptions);
+					return false;
+				});
+
+			});
+		</script>
+
+		
 		<div id="header"></div>
 
 	</head>
 
 	<body>
-		
+
 		<div class="container">
-  <br>
-          
-<div id="carousel-example-generic" class="carousel slide">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="4"></li>
-    
-  </ol>
 
-    <!-- Wrapper for slides -->
-        <div class="carousel-inner">
-            <!-- Slide 1-->
-            <div class="item active">
-                <img src="images/measuringcup.png" alt="Slide 1" />
-                
-            </div>
+			<div id="carousel">
+				<img src="images/colorScale.png" height="150px" id="item-1" />
+				<img src="images/colorClock.png" height="150px" id="item-2" />
+				<img src="images/colorRuler.png" height="150px" id="item-3" />
+				<img src="images/colorThermometer.png" height="250px" id="item-4" />
+				<img src="images/colorSpedometer.png" height="150px" id="item-5" />
+				<img src="images/colorCup.png" height="150px" id="item-6" />
 
-            <!-- Slide 2-->
-              <div class="item">
-                  <img src="images/ruler.jpeg" alt="Slide 2" />
-                 
-              </div>
+			</div>
 
-          <!-- Slide 3-->
-            <div class="item">
-                <img src="images/scale-xxl.png" alt="Slide 3" />
-                
-            </div>
-            
-            <div class="item">
-                <img src="images/spedometer.png" alt="Slide 3" />
-                
-            </div>
-            
-            <div class="item">
-                <img src="images/thermometer-png-icon-19.png" alt="Slide 3" />
-                
-            </div>
-          </div>
-
-
-  <!-- Controls -->
-  <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-    <span class="icon-prev"></span>
-  </a>
-  <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-    <span class="icon-next"></span>
-  </a>
-</div>
-
-		
 	</body>
-	
+
 </html>

@@ -1,13 +1,41 @@
-body{
-	background-color:#D3D3D3;
-}
-.carousel slide{
-	width:50%;
-}
-.carousel-inner{
-	height: 30%;
-	width: 30%;
-	margin: auto;
+body {
+	background-color: #D3D3D3;
 }
 
+.example-desc {
+	margin: 3px 0;
+	padding: 5px;
+}
+
+#carousel {
+	width: 1000px;
+	height: 300px;
+	
+	clear: both;
+	overflow: hidden;
+	background-color: #D3D3D3;
+	border: none;
+	
+}
+#carousel img {
+	visibility: hidden; /* hide images until carousel can handle them */
+	cursor: pointer; /* otherwise it's not as obvious items can be clicked */
+}
+
+.split-left {
+	width: 450px;
+	float: left;
+}
+.split-right {
+	width: 400px;
+	float: left;
+	margin-left: 10px;
+}
+#callback-output {
+	height: 250px;
+	overflow: scroll;
+}
+textarea#newoptions {
+	width: 430px;
+}
 
