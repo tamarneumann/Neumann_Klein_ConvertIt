@@ -19,7 +19,8 @@
 				$("#header").load("header.html");
 			});
 		</script>
-
+		<div id="header"></div>
+				
 		<script type="text/javascript" src="js/jquery.waterwheelCarousel.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function() {
@@ -39,12 +40,15 @@
 					},
 					clickedCenter : function($item) {
 						$('#callback-output').prepend('clickedCenter: ' + $item.attr('id') + '<br/>');
-					}
+					},
+					autoPlay : -1600,
+					sizeMultiplier: .6,
+					separationMultiplier : .4
 				});
 
 				$('#prev').bind('click', function() {
 					carousel.prev();
-					return false
+					return false;
 				});
 
 				$('#next').bind('click', function() {
@@ -64,13 +68,12 @@
 		<style type="text/css">
 			#carousel {
 				width: 960px;
-				border: 1px solid #222;
 				height: 300px;
 				margin: 50px 50px 50px 100px;
 				position: relative;
 				clear: both;
 				overflow: hidden;
-				background: #FFF;
+				background: none;
 			}
 			#carousel img {
 				visibility: hidden; /* hide images until carousel can handle them */
@@ -95,7 +98,7 @@
 			}
 		</style>
 
-		<div id="header"></div>
+
 
 	</head>
 
@@ -110,6 +113,7 @@
 				<img src="images/colorThermometer.png" height="150px" id="item-4" />
 				<img src="images/colorSpedometer.png" height="150px" id="item-5" />
 				<img src="images/colorCup.png" height="150px" id="item-6" />
+				<img src="images/currency.png" height="150px" id="item-7" />
 
 			</div>
 		</div>
