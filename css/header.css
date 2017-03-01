@@ -21,10 +21,16 @@
 /*vertically center the menu elements*/
 .menu{
 	margin-top:-10px;
+	
 }
 
 /*horizontal space between menu elements*/
 .navbar-nav > li{
-  padding-left:20px;
-  padding-right:20px;
+  
+  margin-right: 20px;
+  
+}
+
+.container_menu{
+	margin-right:250px;
 }
