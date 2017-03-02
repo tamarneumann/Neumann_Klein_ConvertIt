@@ -21,7 +21,7 @@ var convertClick = function ()
 		
 		if(dropFrom == "millimeter")
 		{
-			if(dropTo == "cenitmeter")
+			if(dropTo == "centimeter")
 			{
 			    mm2cm(from);
 			}
