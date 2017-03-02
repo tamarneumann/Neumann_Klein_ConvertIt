@@ -6,10 +6,8 @@
     position: relative; 
     margin-top: 70px;
 	background-color: #222;
-	border-style: solid;
-    border-width: 2px;
-    border-color:#66CC00;
 	
+	border-bottom:  solid #80D73C;
 }
 
 #copyright{

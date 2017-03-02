@@ -105,7 +105,7 @@ var convertClick = function ()
 			}
 			else if(dropTo == "kilometer")
 			{
-				mm2kilometer(from);
+				inch2kilometer(from);
 			}
 			else if(dropTo == "foot")
 			{
@@ -438,7 +438,7 @@ var inch2foot = function(from)
 var inch2yard = function(from)
 {
 	 var inch = parseFloat(from) * 0.0277778;
-	 setValue(yard);
+	 setValue(inch);
 };
 
 //convert from inches to miles
@@ -559,6 +559,13 @@ var yard2inch = function(from)
 	 var inch = parseFloat(from) * 36;
 	 setValue(inch);
 };
+//convert from yards to feet
+var yard2foot = function(from)
+{
+	 var foot = parseFloat(from) * 0.0009144;
+	 setValue(foot);
+};
+
 //convert from yards to meters
 var yard2meter = function(from)
 {
