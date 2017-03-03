@@ -2,9 +2,9 @@ var convertClick = function ()
 {
 	var from = document.getElementById("numFrom").value;		//measurment you want to convert from
 	
-	if(isNaN(from))
+	if(isNaN(from) || from <= 0)
 	{
-		alert("Amount must be a valid number.");
+		alert("Amount must be a valid number greater than zero.");
 	}
 	else if(dropFrom == null)
 	{
