@@ -155,4 +155,8 @@ a.ui-button:active,
     border-top-right-radius: 3px;
 }
 
+#currency_notice{
+	float:right;
+	margin-top: 150px;
+}
 
