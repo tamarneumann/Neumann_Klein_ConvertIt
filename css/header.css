@@ -10,7 +10,7 @@
 
 .logo-img{
     position: absolute; 
-    margin-left: 180px; 
+    margin-left: 220px; 
     margin-top:-15px; 
     display: block; 
     height: 80px;  
@@ -32,5 +32,5 @@
 }
 
 .container_menu{
-	margin-right:250px;
+	margin-right:220px;
 }

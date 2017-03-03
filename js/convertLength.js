@@ -6,7 +6,7 @@ var convertClick = function ()
 	{
 		alert("Amount must be a valid number greater than zero.");
 	}
-	else if(dropFrom == null)
+	else if(drop == null)
 	{
 		alert("You must select a unit of measure to convert from.");
 	}
