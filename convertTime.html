@@ -32,10 +32,16 @@
 		<script src="./js/convertTime.js" type="text/javascript"></script>
 
 		<script>
+			/*calculations*/
 			var dropFrom;
 			var dropTo;
+			
+			/*datepicker*/
+			var date1;
+			var date2;
 
 			window.onload = function() {
+				/*calculate on the top half of the page*/
 				$("#calculate").click(convertClick);
 
 				$("#second, #minute, #hour, #day").draggable();
@@ -51,26 +57,97 @@
 						dropFrom = $(ui.draggable).attr("id");
 					}
 				});
+			
+			
+				/*for the data picker on the bottom half of the page*/
+				$('#datepicker').datepicker({
+				    dateFormat: 'mm/dd/yy',
+				    inline: true,
+				    onSelect: function(dateText, inst) { 
+				        date1 = $(this).datepicker('getDate');
+				    }
+				});
+				
+				$("#datepicker2").datepicker({
+					dateFormat: 'mm/dd/yy',
+					inline: true,
+					onSelect: function(dateText, inst) {
+						date2 = $(this).datepicker('getDate');
+					}
+				});
+				$("#datepicker").on("change",function(){
+			        selected = $(this).val();
+    			});
+    			$("#datepicker2").on("change",function(){
+			        selected2 = $(this).val();
+    			});
+    			
+    			$("#submit").click(calculate);
 			};
 
 		</script>
 		
 		<script>
-			$(function() {
-				$("#datepicker").datepicker({
-					minDate : 0,
-					dateFormat: 'mm/dd/yy'
-				});
-				$("#datepicker").on("change",function(){
-			        selected = $(this).val();
-			        calculate(selected);
-    			});
-			});
-			
-			var calculate = function(selected)
+			var calculate = function()
 			{
-				alert(selected);
+				//you only compare days if same year and same month
+				if(date1.getFullYear() == date2.getFullYear())
+				{
+					if(date1.getMonth() == date2.getMonth())
+					{
+						assignDay(dateDiff(date1, date2));
+						assignHour(dateDiff(date1, date2));
+					}
+					else if(date1.getMonth() != date2.getMonth())
+					{
+						var total = multipleMonth(date1, date2);
+						if(date1.getMonth() < date2.getMonth())
+						{
+							assignDay(total);
+							assignHour(total);
+						}
+						else if(date1.getMonth() > date2.getMonth())
+						{
+							alert("else");
+							//total = total * -1; //change to negative because going backwards in time
+							assignDay(total);
+							assignHour(total);
+						}
+					}
+				}
+				
 			};
+			
+			var dateDiff = function(start, end)
+			{
+				return end.getDate() - start.getDate();
+			};
+			
+			var assignDay = function(amt)
+			{
+				document.getElementById("days").innerHTML = amt + " Days";
+			};
+			
+			var assignHour = function(amt)
+			{
+				document.getElementById("hours").innerHTML = (amt * 24) + " Hours";
+			};
+
+			var multipleMonth = function(start, end) 
+			{
+				var total = 0;
+				total += dateDiff(start, new Date(start.getFullYear(), start.getMonth() + 1, 0));
+				var currMonth = start.getMonth() + 1;
+				while (currMonth != end.getMonth()) 
+				{
+					total += daysInMonth(currMonth + 1, start.getFullYear());
+					curMonth++;
+				}
+				total += dateDiff(new Date(end.getFullYear(), end.getMonth() + 1, 1), end);
+				total++;   //you lose a day when subtracting in 2 months so you add the day here
+				return total;
+			};
+
 		</script>
 		
 		
@@ -135,6 +212,10 @@
 		<div id="form-style">
 			<div style="margin:5px">
 				<p>Select date: </p><input type="text" id="datepicker">
+				<p>Select date: </p><input type="text" id="datepicker2">
+				<button id="submit" type="button">Submit</button>
+				<div id="days"><p>Days</p></div>
+				<div id="hours"><p>Hours</p></div>
 			</div>
 		</div>
 		
