@@ -12,9 +12,12 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/locale/af.js"></script>
     	
 		<!--incluce stylesheet-->
 		<link rel="stylesheet" href="css/convert.css">
+		<link rel="stylesheet" href="css/datepicker.css">
+
 
 		<!--include the header in the convert page-->
 		<!--the javascript will load the header.html and assign it to the header div-->
@@ -51,6 +54,27 @@
 			};
 
 		</script>
+		
+		<script>
+			$(function() {
+				$("#datepicker").datepicker({
+					minDate : 0,
+					dateFormat: 'mm/dd/yy'
+				});
+				$("#datepicker").on("change",function(){
+			        selected = $(this).val();
+			        calculate(selected);
+    			});
+			});
+			
+			var calculate = function(selected)
+			{
+				alert(selected);
+			};
+		</script>
+		
+		
+		
 	</head>
 
 	<body>
@@ -107,6 +131,14 @@
 
 		</div>
 
+
+		<div id="form-style">
+			<div style="margin:5px">
+				<p>Select date: </p><input type="text" id="datepicker">
+			</div>
+		</div>
+		
+		
 		<!--include the footer in the page-->
 		<!--the javascript will load the footer.html and assign it to the footer div-->
 		<script>
