@@ -60,7 +60,7 @@
 
 
 
-#calculate {
+.calculate {
 	height: 30px;
 	width: 150px;
 	font-family: "Arial";
@@ -80,14 +80,18 @@
 }
 
 #conversion-row {
-	margin-top: 50px;
-	margin-bottom: 50px;
-	margin-right: 100px;
-	margin-left: -50px;
+	
+	margin: 50px 100px 50px -50px;
 	display: flex;
 	justify-content: space-between;
 	
 	
+}
+
+#calandar{
+	display: flex;
+	margin: 50px 150px 50px 150px;
+	justify-content: space-between;
 }
 
 

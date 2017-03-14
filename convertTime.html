@@ -43,7 +43,7 @@
 
 			window.onload = function() {
 				/*calculate on the top half of the page*/
-				$("#calculate").click(convertClick);
+				$("#calculateTime").click(convertClick);
 
 				$("#second, #minute, #hour, #day").draggable();
 				$("#dropTo").droppable({
@@ -77,7 +77,7 @@
 					}
     			});
     			
-    			$("#submit").click(calculate);
+    			$("#calculateCal").click(calculate);
 			};
 
 		</script>		
@@ -108,7 +108,7 @@
 
 			<!--have a separate dive to hold all choices-->
 			<div class= "center">
-				<button id="calculate" type="button">
+				<button id="calculateTime" class= "calculate" type="button">
 					Calculate
 				</button>
 			</div>
@@ -140,13 +140,18 @@
 
 
 		<div id="form-style">
-			<div style="margin:5px">
-				<p>Select date: </p><input type="text" id="datepicker">
-				<p>Select date: </p><input type="text" id="datepicker2">
-				<button id="submit" type="button">Submit</button>
+			    <div  id = "calandar">
+				<p>Start date: </p><input type="text" id="datepicker">
+				<p>End date: </p><input type="text" id="datepicker2">
+				</div>
+				<div class= "center">
+				<button id="calculateCal" class = "calculate" type="button">
+					Calculate
+				</button>
+			</div>
 				<div id="days"><p>Days</p></div>
 				<div id="hours"><p>Hours</p></div>
-			</div>
+			
 		</div>
 		
 		
