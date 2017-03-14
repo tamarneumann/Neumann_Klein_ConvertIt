@@ -45,6 +45,9 @@
 	padding-top: .2cm;
 }
 
+#dateConversion div:first-child{
+	float: left;
+}
 #calculate {
 	height: 30px;
 	width: 150px;

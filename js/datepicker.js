@@ -19,11 +19,11 @@ var dateDiff = function(start, end) {
 };
 
 var assignDay = function(amt) {
-	document.getElementById("days").innerHTML = amt + " Days";
+	document.getElementById("days").innerHTML = amt;
 };
 
 var assignHour = function(amt) {
-	document.getElementById("hours").innerHTML = (amt * 24) + " Hours";
+	document.getElementById("hours").innerHTML = (amt * 24);
 };
 
 var multipleMonth = function(start, end) {
