@@ -58,8 +58,6 @@
 	padding-top: 7px;
 }
 
-
-
 .calculate {
 	height: 30px;
 	width: 150px;
@@ -90,11 +88,11 @@
 
 #calandar{
 	display: flex;
-	margin: 50px 150px 50px 150px;
+	margin: 50px 150px 10px; 150px;
 	justify-content: space-between;
 }
 
-#error{
+.error{
 	height:30px;
 	color:red;
 }
@@ -129,5 +127,10 @@
 	
 	width: 45%;
 }
+
+.times{
+	margin-bottom: 30px;
+}
+
 
 

@@ -1,7 +1,12 @@
 var calculate = function() {
-	if (date1 > date2)
-		alert("The start date must be before the end date");
+	if(date1 == null || date2 == null)
+	{
+		document.getElementById("error2").innerHTML = "*you must select a valid date";
+	}
+	else if (date1 > date2)
+		document.getElementById("error2").innerHTML = "*the start date must be before the end date";
 	else {
+		document.getElementById("error2").innerHTML = "";
 		//you only compare days if same year and same month
 		if (date1.getMonth() == date2.getMonth() && date1.getFullYear() == date2.getFullYear()) {
 			assignDay(dateDiff(date1, date2));
@@ -19,11 +24,11 @@ var dateDiff = function(start, end) {
 };
 
 var assignDay = function(amt) {
-	document.getElementById("days").innerHTML = amt;
+	document.getElementById("days").innerHTML = amt + " Days";
 };
 
 var assignHour = function(amt) {
-	document.getElementById("hours").innerHTML = (amt * 24);
+	document.getElementById("hours").innerHTML = (amt * 24) + " Hours";
 };
 
 var multipleMonth = function(start, end) {
