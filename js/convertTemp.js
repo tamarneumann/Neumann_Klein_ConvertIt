@@ -4,18 +4,19 @@ var convertClick = function ()
 	
 	if(isNaN(from) || from.length == 0)
 	{
-		document.getElementById("error").innerHTML = "amount must be a valid number";
+		document.getElementById("error").innerHTML = "*amount must be a valid number";
 	}
 	else if(dropFrom == null)
 	{
-		document.getElementById("error").innerHTML = "You must select a unit of measure to convert from";
+		document.getElementById("error").innerHTML = "*you must select a unit of measure to convert from";
 	}
 	else if(dropTo == null)
 	{
-		document.getElementById("error").innerHTML = "You must select a unit of measure to convert to";
+		document.getElementById("error").innerHTML = "*you must select a unit of measure to convert to";
 	}
 	else 
 	{
+		document.getElementById("error").innerHTML= "";
 		//search for the appropirate function to call based on the unit of measure
 		//that the user wants to convert to and from
 		if(dropFrom == "farenheit")
