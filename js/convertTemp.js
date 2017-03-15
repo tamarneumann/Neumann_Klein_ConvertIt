@@ -2,17 +2,17 @@ var convertClick = function ()
 {
 	var from = document.getElementById("numFrom").value;		//measurment you want to convert from
 	
-	if(isNaN(from))
+	if(isNaN(from) || from.length == 0)
 	{
-		alert("Amount must be a valid number.");
+		document.getElementById("error").innerHTML = "amount must be a valid number";
 	}
 	else if(dropFrom == null)
 	{
-		alert("You must select a unit of measure to convert from.");
+		document.getElementById("error").innerHTML = "You must select a unit of measure to convert from";
 	}
 	else if(dropTo == null)
 	{
-		alert("You must select a unit of measure to convert to.");
+		document.getElementById("error").innerHTML = "You must select a unit of measure to convert to";
 	}
 	else 
 	{
