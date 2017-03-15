@@ -11,6 +11,10 @@
 		
 		<title>ConvertIt|Contact</title>
 	
+		<!--incluce stylesheet-->
+		<link rel="stylesheet" href="css/contact.css">
+
+
 		<!--include the header in the convert page-->
 		<!--the javascript will load the header.html and assign it to the header div-->
 		<script>
@@ -36,11 +40,10 @@
         <div id="contact">
             <h1>Contact Us</h1>
             
-            <div id = "name"><input type="text" name="name" placeholder= "Name" /><span id="nameErr" class="center" style="margin-left: 500px "><label></label></span></div>
-            
-            <div id = "email"><input type="email" name="email" placeholder="Email address" /></div>
-            <div id = "subject"><input type="text" name="subject" placeholder="Subject" /></div>
-            <div id = "message"><textarea type="text" name="detail" placeholder="message" ></textarea></div>
+            <div id = "formName"><input type="text" name="name" placeholder= "Name" /><span id="nameErr" class="center contactError" ><label></label></span></div>
+            <div id = "formEmail"><input type="email" name="email" placeholder="Email address" /><span id="emailErr" class="center contactError"><label></label></span></div>
+            <div id = "formSubject"><input type="text" name="subject" placeholder="Subject" /><span id="subjectErr" class="center contactError" ><label></label></span></div>
+            <div id = "formMessage"><textarea type="text" name="detail" placeholder="Message" ></textarea></div>
             <input type="submit" id= "submit_button" name="submit_button" value="Send Email"/>
         </div>
     </form>

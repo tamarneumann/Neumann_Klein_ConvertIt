@@ -1,11 +1,35 @@
 var sendEmail = function(){
 	
 	
-	var name = document.getElementById("name").value;
+	var formName = document.getElementById("formName").value;
+	var formEmail = document.getElementById("formEmail").value;
+	var formSubject = document.getElementById("formSubject").value;
 	
-	if(name == null)
+	alert(formName);
+	if(formName == null || formEmail == null || formSubject == null)
 	{
+		if(formName == null)
+		{
+			
+			document.getElementById("nameErr").innerHTML = "*required field";
+		}
 		
-		document.getElementById("nameErr").innerHTML = "*amount must be a valid number";
+		if(formEmail == null)
+		{
+			
+			document.getElementById("emailErr").innerHTML = "*required field";
+		}
+		
+		if(formSubject == null)
+		{
+			
+			document.getElementById("subjectErr").innerHTML = "*required field";
+		}
+	   return false;
 	}
+	
+		
+	
+	
+		
 };

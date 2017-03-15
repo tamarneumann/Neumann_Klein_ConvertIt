@@ -1,0 +1,28 @@
+.contactError{
+	color: red;
+	
+}
+
+#contact{
+	background-color: 	#F5F5F5;
+	width: 60%;
+	height: 300px;
+	text-align: center;
+	margin-top: 100px;
+	margin-left: 250px;
+	text: Calibri;
+	
+}
+
+#formName, #formEmail, #formSubject, #formMessage{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	
+	
+}
+
+#submit_button{
+	border-radius: 5px;
+	height: 30px;
+	width: 130px;
+}
