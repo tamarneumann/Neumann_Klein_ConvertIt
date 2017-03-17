@@ -1,8 +1,8 @@
 var sendEmail = function() {
 
-	var formName = document.getElementById("name").value;
-	var formEmail = document.getElementById("email").value;
-	var formSubject = document.getElementById("sub").value;
+	var formName = document.getElementById("varName").value;
+	var formEmail = document.getElementById("varEmail").value;
+	var formSubject = document.getElementById("varSubject").value;
 
 	if(formName.length == 0 || formEmail.length == 0 || formSubject.length == 0)
 	{	

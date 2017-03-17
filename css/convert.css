@@ -6,6 +6,7 @@
 }
 .center {
 	text-align: center;
+	/*margin: 0 auto;*/
 }
 
 #numFrom  {
@@ -128,8 +129,15 @@
 	width: 45%;
 }
 
-.times{
+#days, #hours{
+	
+	
+	display: inline-block;
+	padding-right: 25px;
+	padding-left:25px;
 	margin-bottom: 30px;
+	
+	
 }
 
 

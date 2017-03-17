@@ -46,23 +46,19 @@
 					sizeMultiplier: .6,
 					separationMultiplier : .4
 				});
-
 				$('#prev').bind('click', function() {
 					carousel.prev();
 					return false;
 				});
-
 				$('#next').bind('click', function() {
 					carousel.next();
 					return false;
 				});
-
 				$('#reload').bind('click', function() {
 					newOptions = eval("(" + $('#newoptions').val() + ")");
 					carousel.reload(newOptions);
 					return false;
 				});
-
 			});
 		</script>
 
@@ -80,7 +76,6 @@
 				visibility: hidden; /* hide images until carousel can handle them */
 				cursor: pointer; /* otherwise it's not as obvious items can be clicked */
 			}
-
 			.split-left {
 				width: 450px;
 				float: left;
