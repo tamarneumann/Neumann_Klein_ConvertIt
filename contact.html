@@ -40,12 +40,22 @@
         <div id="contact">
             <h1>Contact Us</h1>
             
-            <div id = "formName"><input type="text" name="name" placeholder= "Name" /><span id="nameErr" class="center contactError" ><label></label></span></div>
-            <div id = "formEmail"><input type="email" name="email" placeholder="Email address" /><span id="emailErr" class="center contactError"><label></label></span></div>
-            <div id = "formSubject"><input type="text" name="subject" placeholder="Subject" /><span id="subjectErr" class="center contactError" ><label></label></span></div>
+            <div id = "formName"><input id="name" type="text" name="name" placeholder= "Name" /><span id="nameErr" class="center contactError" ><label></label></span></div>
+            <div id = "formEmail"><input id="email" type="email" name="email" placeholder="Email address" /><span id="emailErr" class="center contactError"><label></label></span></div>
+            <div id = "formSubject"><input id="sub" type="text" name="subject" placeholder="Subject" /><span id="subjectErr" class="center contactError" ><label></label></span></div>
             <div id = "formMessage"><textarea type="text" name="detail" placeholder="Message" ></textarea></div>
             <input type="submit" id= "submit_button" name="submit_button" value="Send Email"/>
         </div>
     </form>
+    
+    <!--include the footer in the page-->
+	<!--the javascript will load the footer.html and assign it to the footer div-->
+	<script>
+		$(function() {
+			$("#footer").load("footer.html");
+		});
+	</script>
+	<div id="footer"></div>
+		
 	</body>
 </html>
