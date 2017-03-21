@@ -14,14 +14,19 @@
 	text: Calibri;
 	
 }
+
+#formTitle{
+	text-align: center;
+}
+
 #submit_button{
 	margin-left: 310px;
 }
 #formName, #formEmail, #formSubject, #formMessage{
-	display: block;
+	
+	float: left;
 	margin-top: 10px;
-	margin-bottom: 10px;
-	margin-left: 150px;
+	margin-left: 300px;
 	text-align: center;
 	
 	
@@ -29,6 +34,7 @@
 
 #submit_button{
 	border-radius: 5px;
+	margin-top: 10px;
 	height: 30px;
 	width: 130px;
 }
