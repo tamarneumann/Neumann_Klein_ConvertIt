@@ -1,3 +1,5 @@
+
+
 var sendEmail = function() {
 
 	var formName = document.getElementById("varName").value;
@@ -24,8 +26,10 @@ var sendEmail = function() {
 	}
 	else
 	{
-		//everything is filled out - send the email
-		alert("email sent");
+
+       $( "#dialog" ).dialog();
+  		document.getElementById("dialog").style.display = 'block';
+  	
 	}
 	
 
