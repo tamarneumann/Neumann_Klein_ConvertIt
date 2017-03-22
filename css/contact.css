@@ -22,16 +22,22 @@
 #submit_button{
 	margin-left: 310px;
 }
-#formName, #formEmail, #formSubject, #formMessage{
+#formName, #formEmail, #formSubject{
 	
 	float: left;
 	margin-top: 10px;
-	margin-left: 300px;
+	margin-left: 100px;
 	text-align: center;
 	
 	
 }
-
+ #formMessage{
+ 	
+ 	float: right;
+ 	margin-right: 150px;
+ 	margin-top: -50px
+ 	
+ }
 #submit_button{
 	border-radius: 5px;
 	margin-top: 10px;
