@@ -12,8 +12,8 @@
 		
 		<title>ConvertIt|Contact</title>
 	
-		<!--incluce stylesheet-->
-		<link rel="stylesheet" href="css/contact.css">
+		<!--incluce stylesheet
+		<link rel="stylesheet" href="css/contact.css">-->
 
 		<!--include the header in the convert page-->
 		<!--the javascript will load the header.html and assign it to the header div-->
@@ -22,75 +22,65 @@
 				$("#header").load("header.html");
 			});
 		</script>
-		
-	 <script>
-	  $( function() {
-	    $( "#formMessage" ).resizable();
-	  } );
-	  </script>
 		<div id="header"></div>
 		
 		<script src="./js/contactForm.js" type="text/javascript"></script>
 		
 		<script>
-			window.onload = function() {
-
-				document.getElementById("dialog").style.display = 'none';
+			window.onload = function(){
+				
 				$("#submit_button").click(sendEmail);
-				alert(load);
 			};
 		</script>
 	</head>
 	
 	<body>
-		
-		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="/resources/demos/style.css">
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
-	</head>
 	
-	<body>
-		
-<div id="dialog" title="Thank you for contacting us!">
-  <p> We are reviewing your email and will get back to you shortly. We appreciate your patience.</p>
-</div>
 
-	     <form id="contact">
-	       
-	            <h1 id= "formTitle">Contact Us</h1>
+		
+		
+		
+		
+		
+		
+		 <form >
+		<div class="form-group">
+	    
+	        <div id="contact">
+	            <h1>Contact Us</h1>
 	            
 	            <div id = "formName">
 	            	<input type="text" id="varName" name="name" placeholder= "Name" />
 		            	<span id="nameErr" class="contactError" >
-		            		<label></label>
+		            		<label style=" width: 100px"></label>
 		                </span>
 	            </div>
-	            <br style="clear:both" />
+	            
 	            <div id = "formEmail">
-	            	<input type="email" id="varEmail"  placeholder="Email address" />
+	            	<input type="email" id="varEmail" name="email" placeholder="Email address" />
 		            	<span id="emailErr" class="contactError">
-		            		<label></label>
-		            	</span>
-	            </div>
-	            <br style="clear:both" />
-	            <div id = "formSubject">
-	            	<input type="text" id="varSubject"  placeholder="Subject" />
-		            	<span id="subjectErr" class="contactError" >
-		            		<label></label>
+		            		<label style=" width: 100px"></label>
 		            	</span>
 	            </div>
 	            
-	            <div id = "formMessage" class="ui-widget-content" >
-	            	<input type="text" id="varMessage"  placeholder="Message" />
-	            	    <span id="messageErr" class="contactError" >
-		            		<label></label>
+	            <div id = "formSubject">
+	            	<input type="text" id="varSubject" name="subject" placeholder="Subject" />
+		            	<span id="subjectErr" class="contactError" >
+		            		<label style=" width: 100px"></label>
 		            	</span>
 	            </div>
-	            <br style="clear:both" />
-	            <input type="submit" id= "submit_button"  value="Send Email"/>
-	       
+	            
+	            <div id = "formMessage">
+	            	<textarea type="text" id="varMessage" name="detail" placeholder="Message" ></textarea>
+	            	    <span id="messageErr" class="contactError" >
+		            		<label style=" width: 100px"></label>
+		            	</span>
+	            </div>
+	            
+	            <input type="submit" id= "submit_button" name="submit_button" value="Send Email"/>
+	        </div>
+	    
+	    </div>
 	    </form>
     
     	<!--include the footer in the page-->
