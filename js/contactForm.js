@@ -2,8 +2,10 @@ function sendEmail() {
 	var formName = document.getElementById("varName").value;
 	var formEmail = document.getElementById("varEmail").value;
 	var formSubject = document.getElementById("varSubject").value;
+	
+	var emailFilter = /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/;
 
-	if(formName.length == 0 || formEmail.length == 0 || formSubject.length == 0)
+	if(formName.length == 0 || formEmail.length == 0 || formSubject.length == 0 || !emailFilter.test(formEmail))
 	{	
 		if (formName.length == 0) {
 	
@@ -18,7 +20,11 @@ function sendEmail() {
 	
 			document.getElementById("emailErr").innerHTML = "*required field";
 		}
-		else {
+		else if (!emailFilter.test(formEmail)) {
+			document.getElementById("emailErr").innerHTML = "*invalid email";
+		}
+		else
+		{
 			document.getElementById("emailErr").innerHTML = "";
 		}
 	
