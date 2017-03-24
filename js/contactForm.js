@@ -2,6 +2,7 @@ function sendEmail() {
 	var formName = document.getElementById("varName").value;
 	var formEmail = document.getElementById("varEmail").value;
 	var formSubject = document.getElementById("varSubject").value;
+	var formMessage = document.getElementById("varMessage").value; 
 	
 	var emailFilter = /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/;
 
@@ -43,15 +44,21 @@ function sendEmail() {
 		document.getElementById("nameErr").innerHTML = "";
 		document.getElementById("emailErr").innerHTML = "";
 		document.getElementById("subjectErr").innerHTML = "";
+		document.getElementById("varMessage").innerHTML = "";
 		
 		//everything is filled out - send the email
 		$("#modalContact .close").click();		 
-
-		alert("email sent");
+		$(".modal-body input").val("");
+		
+		$.ajax({
+			url:'email.php',
+			data:{name: formName, email: formEmail, subject: formSubject, message: formMessage},
+			type:'POST',
+			success:function(data){
+				alert(data);
+			}
+		});
+		
 	}
-	
-
-
 };
-
 

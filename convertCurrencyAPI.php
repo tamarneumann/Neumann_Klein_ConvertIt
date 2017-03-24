@@ -4,7 +4,6 @@
 $FROM_CURRENCY = $_POST['from'];
 $TO_CURRENCY = $_POST['to'];
 $AMOUNT = $_POST['amt'];
-$YOUR_API_KEY = "bfe4ced123054d17e4048402";
 
 //conver the currecny to the 3 letter code
 if($FROM_CURRENCY == "us_dollar")
@@ -31,7 +30,7 @@ else if($TO_CURRENCY == "canadian_dollar")
 
 
 $url = "https://www.exchangerate-api.com/" . $FROM_CURRENCY . "/" 
-					. $TO_CURRENCY . "/" . $AMOUNT . "?k=" . $YOUR_API_KEY;
+					. $TO_CURRENCY . "/" . $AMOUNT . "?k=" . "bfe4ced123054d17e4048402";
 
 $result = file_get_contents($url);
 echo $result;
