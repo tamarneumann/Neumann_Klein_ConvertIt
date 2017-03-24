@@ -39,7 +39,7 @@ function sendEmail() {
 		document.getElementById("subjectErr").innerHTML = "";
 		
 		//everything is filled out - send the email
-		 document.getElementById("modalContact").modal('hide');
+		$("#modalContact .close").click();		 
 
 		alert("email sent");
 	}
@@ -47,3 +47,5 @@ function sendEmail() {
 
 
 };
+
+
