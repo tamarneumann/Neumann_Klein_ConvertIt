@@ -58,6 +58,7 @@ function sendEmail() {
 				alert(data);
 			}
 		});
+		$( "#dialog" ).dialog( "open" );
 	}
 };
 
