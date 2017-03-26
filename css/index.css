@@ -1,6 +1,6 @@
 
 #aboutText{
-	width: 50%;
+	width: 60%;
 	margin: auto;
 	text-align: center;	
 }
@@ -8,6 +8,7 @@
 #conversionList{
 	text-align:left;
 	margin-left: 150px;
+	margin-right: 150px;
 }
 .title{
 	
