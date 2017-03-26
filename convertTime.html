@@ -18,7 +18,6 @@
 		<link rel="stylesheet" href="css/convert.css">
 		<link rel="stylesheet" href="css/datepicker.css">
 
-
 		<!--include the header in the convert page-->
 		<!--the javascript will load the header.html and assign it to the header div-->
 		<script>
@@ -58,22 +57,23 @@
 						dropFrom = $(ui.draggable).attr("id");
 					}
 				});
-			
-			
+
 				/*for the data picker on the bottom half of the page*/
 				$('#datepicker').datepicker({
 				    dateFormat: 'mm/dd/yy',
-				    inline: true,
+				    showButtonPanel: true,
 				    onSelect: function(dateText, inst) { 
-				        date1 = $(this).datepicker('getDate');
+				        val = $(this).val();
+				        date1 = new Date(val);
 				    }
 				});
 				
 				$("#datepicker2").datepicker({
 					dateFormat: 'mm/dd/yy',
-					inline: true,
+					showButtonPanel: true,
 					onSelect: function(dateText, inst) {
-						date2 = $(this).datepicker('getDate');
+						val = $(this).val();
+						date2 = new Date(val);
 					}
     			});
     			
