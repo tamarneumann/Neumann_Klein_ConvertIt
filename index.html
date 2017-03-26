@@ -8,6 +8,7 @@
 		<!--page title-->
 		<title>ConvertIt | Home</title>
 
+		<link rel = "stylesheet" href = "css/index.css">
 		<!--import scripts for javascript and bootstrap-->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
  		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
@@ -62,40 +63,7 @@
 			});
 		</script>
 
-		<style type="text/css">
-			#carousel {
-				width: 960px;
-				height: 300px;
-				margin: 50px 50px 50px 100px;
-				position: relative;
-				clear: both;
-				overflow: hidden;
-				background: none;
-			}
-			#carousel img {
-				visibility: hidden; /* hide images until carousel can handle them */
-				cursor: pointer; /* otherwise it's not as obvious items can be clicked */
-			}
-			.split-left {
-				width: 450px;
-				float: left;
-			}
-			.split-right {
-				width: 400px;
-				float: left;
-				margin-left: 10px;
-			}
-			#callback-output {
-				height: 250px;
-				overflow: scroll;
-			}
-			textarea#newoptions {
-				width: 430px;
-			}
-		</style>
-
-
-
+		
 	</head>
 
 	<body>
@@ -113,18 +81,31 @@
 
 			</div>
 		</div>
-		
-	    <div id="aboutText" >
-			<h5>ConvertIt is an interactive website that allows you to convert between different units of measurments.
-			<br><span class="title">Weight:</span> Pounds, Kilograms, Ounces, Grams and Tons
-			<br><span class="title">Length:</span> Millimeters, Centimerters, Inches, Feet, Yards, Meters, Kilometers and Miles
-			<br><span class="title">Temperature:</span> Celcius, Farenheit and Kelvin
-			<br><span class="title">Time:</span> Seconds, Minutes, Hours and Days
-			<br><span class="title">Currency:</span> US Dollars, Israeli Shekels, Euros, British Pounds and Canadian Dollars
-			<br>Just chose an option from the conversions dropdown to get started! </h5>
+	    <div id="aboutText" class = "panel panel-default">
+	    	<div class = "panel panel-heading"><strong>About us</strong></div>
+			<div class = "panel panel-body">
+				<p>
+						ConvertIt is an interactive website that allows you to convert between different units of measurments.
+						If you are traveling, doing homework or simply curious about different conversions, convertIt allows you to choose
+						between:
+				</p>
+				
+				<div id = "conversionList">
+				    <span class="title">Weight:</span>Pounds, Kilograms, Ounces, Grams and Tons
+	 			<br><span class="title">Length:</span> Millimeters, Centimerters, Inches, Feet, Yards, Meters, Kilometers and Miles
+	 			<br><span class="title">Temperature:</span> Celcius, Farenheit and Kelvin
+	 			<br><span class="title">Time:</span> Seconds, Minutes, Hours and Days
+	 			<br><span class="title">Currency:</span> US Dollars, Israeli Shekels, Euros, British Pounds and Canadian Dollars
+				</div>
+				<br>
+				 Just chose an option from the Conversions dropdown to get started!
+				
+			
+			 </div>
 
 		</div>
 		
+
 		
 		
 		

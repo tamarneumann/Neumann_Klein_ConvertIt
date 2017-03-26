@@ -1,11 +1,20 @@
+
 #aboutText{
-	width: 60%;
+	width: 50%;
 	margin: auto;
-	text-align: center;
-	
+	text-align: center;	
 }
 
-
+#conversionList{
+	text-align:left;
+	margin-left: 150px;
+}
+.title{
+	
+	color: #80D73C;
+	font-style: oblique;
+	font-weight: bold;
+}
 h3{
 	text-align: center;
 }
