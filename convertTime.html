@@ -45,7 +45,7 @@
 				/*calculate on the top half of the page*/
 				$("#calculateTime").click(convertClick);
 
-				$("#second, #minute, #hour, #day").draggable();
+				$("#second, #minute, #hour, #day").draggable({revert: true});
 				$("#dropTo").droppable({
 					drop : function(event, ui) {
 						$(this).addClass("ui-state-highlight").find("p").html($(ui.draggable).attr("id").toUpperCase());

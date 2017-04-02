@@ -35,7 +35,7 @@
 			window.onload = function() {
 				$("#calculateWeight").click(convertClick);
 
-				$("#kilogram, #gram, #pound, #ounce, #ton").draggable();
+				$("#kilogram, #gram, #pound, #ounce, #ton").draggable({revert: true});
 				$("#dropTo").droppable({
 					drop : function(event, ui) {
 						$(this).addClass("ui-state-highlight").find("p").html($(ui.draggable).attr("id").toUpperCase());

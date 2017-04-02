@@ -30,8 +30,8 @@
 			var dropTo;
 			var amount = 0;
 
-			$(document).ready(function() {z
-				$("#us_dollar, #euro, #canadian_dollar, #british_pound, #israeli_shekel").draggable();
+			$(document).ready(function() {
+				$("#us_dollar, #euro, #canadian_dollar, #british_pound, #israeli_shekel").draggable({revert: true});
 				$("#dropTo").droppable({
 					drop : function(event, ui) {
 						$(this).addClass("ui-state-highlight").find("p").html($(ui.draggable).attr("id").toUpperCase());

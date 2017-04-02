@@ -35,7 +35,7 @@
 			window.onload = function() {
 				$("#calculateTemp").click(convertClick);
 
-				$("#farenheit, #celcius, #kelvin").draggable();
+				$("#farenheit, #celcius, #kelvin").draggable({revert: true});
 				$("#dropTo").droppable({
 					drop : function(event, ui) {
 						$(this).addClass("ui-state-highlight").find("p").html($(ui.draggable).attr("id").toUpperCase());
