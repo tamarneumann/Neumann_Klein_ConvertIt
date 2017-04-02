@@ -35,7 +35,8 @@
 			window.onload = function() {
 				$("#calculateLength").click(convertClick);
 
-				$("#centimeter, #millimeter, #inch, #foot, #yard, #meter, #kilometer, #mile").draggable();
+				$("#centimeter, #millimeter, #inch, #foot, #yard, #meter, #kilometer, #mile").draggable({revert: true});
+	
 				$("#dropTo").droppable({
 					drop : function(event, ui) {
 						$(this).addClass("ui-state-highlight").find("p").html($(ui.draggable).attr("id").toUpperCase());
@@ -47,6 +48,7 @@
 						$(this).addClass("ui-state-highlight").find("p").html($(ui.draggable).attr("id").toUpperCase());
 						dropFrom = $(ui.draggable).attr("id");
 					}
+					
 				});
 			};
 
